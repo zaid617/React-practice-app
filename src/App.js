@@ -15,8 +15,10 @@ function App() {
       setLight("dark")
     }
     else
-    setMode("dark")
+    {
     setLight("light")
+    setMode("dark")
+    }
   }
   return (
    <>
