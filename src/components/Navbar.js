@@ -9,7 +9,7 @@ function NavBar(props) {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3">
+        <Navbar key={expand} expand={expand} className={`mb-3 navbar-${props.mode} bg-${props.mode}`}>
           <Container fluid>
             <Navbar.Brand href="#"><b>{props.title}</b></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -39,6 +39,13 @@ function NavBar(props) {
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
+                  <Form.Check 
+                    type="switch"
+                    id="custom-switch"
+                    className={`text-${props.light} mx-3`}
+                    label="Dark Mode"
+                    onClick={props.toggleMode}
+                  />
           </Container>
         </Navbar>
       ))}
