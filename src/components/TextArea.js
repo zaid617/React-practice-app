@@ -60,7 +60,7 @@ export default function TextArea(props) {
         value={text} 
         as="textarea" 
         aria-label="With textarea" 
-        style={{backgroundColor: props.mode==="dark"?"#5c5c5c":"white", color: props.mode==="dark"?"white":"black"}}
+        style={{backgroundColor: props.mode==="dark"?"#343a40":"white", color: props.mode==="dark"?"white":"black"}}
         />
       </InputGroup>
       <Button variant=" btn btn-primary my-3 " onClick={upperCaseHandle} >Convert To Uper Case</Button>

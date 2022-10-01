@@ -18,7 +18,7 @@ function App() {
       })
     setTimeout(() => {
       setAlert(null)
-    }, 2000);
+    }, 3000);
   }
 
   const toggleMode = ()=>{
@@ -30,7 +30,7 @@ function App() {
     }
     else
     {
-    document.body.style.backgroundColor = "#343a40"
+    document.body.style.backgroundColor = "#042743"
     showAlert("Dark Mode is enabled...", "Success")
     setLight("light")
     setMode("dark")
