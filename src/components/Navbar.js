@@ -9,7 +9,7 @@ function NavBar(props) {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className={`mb-3 navbar-${props.mode} bg-${props.mode}`}>
+        <Navbar key={expand} expand={expand} className={`mb-1 navbar-${props.mode} bg-${props.mode}`}>
           <Container fluid>
             <Navbar.Brand href="#"><b>{props.title}</b></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
