@@ -4,7 +4,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 
 
-export default function TextArea() {
+export default function TextArea(props) {
 
 
     // this function is used to convert all letters in upper case
@@ -51,7 +51,7 @@ export default function TextArea() {
 
     return ( 
         <>
-    <div className='container'>
+    <div className='container' style={{color:props.mode==="dark"?'white':'black'}}>
         <h1 className='my-3'>Enter the text to analyze....</h1>
        <InputGroup>
         <Form.Control 
@@ -59,29 +59,31 @@ export default function TextArea() {
         rows={6}
         value={text} 
         as="textarea" 
-        aria-label="With textarea" />
+        aria-label="With textarea" 
+        style={{backgroundColor: props.mode==="dark"?"#5c5c5c":"white", color: props.mode==="dark"?"white":"black"}}
+        />
       </InputGroup>
       <Button variant=" btn btn-primary my-3 " onClick={upperCaseHandle} >Convert To Uper Case</Button>
       <Button variant=" btn btn-primary m-3" onClick={lowerCaseHandle} >Convert To Lower Case</Button>
       <Button variant=" btn btn-danger my-3" onClick={clearText} >Clear Text</Button>
-      <Button variant=" btn btn-danger my-3" onClick={removeSpace} >Remove Extra Spaces</Button>
+      <Button variant=" btn btn-danger m-3" onClick={removeSpace} >Remove Extra Spaces</Button>
     <hr />
     </div>
 
 
 
-    <div className="container">
+    <div className="container" style={{color:props.mode==="dark"?"white":"black"}}>
         <h2><u>Words Summary</u></h2>
         <p>No. Of Words : {text.split(" ").length}</p>
         <p>No. Of Characters : {text.length}</p>
         <p>{0.008*text.split(" ").length} Minutes To Read.</p>
     </div>
 
-    <div className="container">
+    <div className="container" style={{color:props.mode==="dark"?"white":"black"}}>
         <h3><u>Preview</u></h3>
         <p>{text}</p>
     </div>
 
-    </>
+   </>
   )
 }
