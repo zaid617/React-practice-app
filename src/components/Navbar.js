@@ -43,7 +43,7 @@ function NavBar(props) {
                     type="switch"
                     id="custom-switch"
                     className={`text-${props.light} mx-3`}
-                    label="Dark Mode"
+                    label={`${props.light} Mode`}
                     onClick={props.toggleMode}
                   />
           </Container>
