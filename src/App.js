@@ -24,9 +24,9 @@ function App() {
   }
   return (
    <>
-   <NavBar title="TextUtils" mode={mode} toggleMode={toggleMode} light={light}/>
+   <NavBar title="Fun & Word" mode={mode} toggleMode={toggleMode} light={light}/>
    <TextArea mode={mode}/>
-   <About/>
+   <About mode={mode}/>
    </>
   )
 }

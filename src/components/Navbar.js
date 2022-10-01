@@ -39,13 +39,14 @@ function NavBar(props) {
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-                  <Form.Check 
+                <Form.Check 
                     type="switch"
                     id="custom-switch"
                     className={`text-${props.light} mx-3`}
                     label={`${props.light} Mode`}
                     onClick={props.toggleMode}
                   />
+                 
           </Container>
         </Navbar>
       ))}

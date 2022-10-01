@@ -1,9 +1,10 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
-export default function About() {
+export default function About(props) {
   return (
-      <Card border="secondary" className="container p-5" >
+      <Card border="secondary" className="container p-5 mb-3" style={{backgroundColor: props.mode==="dark"?"#5c5c5c":"white", color: props.mode==="dark"?"white":"black"}}
+      >
     
           <h1>About Us</h1>
           <hr />
