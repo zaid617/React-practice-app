@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 export default function About(props) {
   return (
-      <Card border="secondary" className="container p-5 mb-3" style={{backgroundColor: props.mode==="dark"?"#343a40":"white", color: props.mode==="dark"?"white":"black"}}
+      <Card border="secondary" className="container p-5 mb-3 mt-5" style={{backgroundColor: props.mode==="dark"?"#343a40":"white", color: props.mode==="dark"?"white":"black"}}
       >
     
           <h1>About Us</h1>

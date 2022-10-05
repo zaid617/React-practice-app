@@ -1,9 +1,14 @@
+import { NavLink } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import {
+  Link
+} from "react-router-dom";
+
 
 function NavBar(props) {
   return (
@@ -25,7 +30,9 @@ function NavBar(props) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  
+                  <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                  <Nav.Link><Link to="/about">About</Link></Nav.Link>
                   
                 </Nav>
                 <Form className="d-flex">
@@ -49,6 +56,7 @@ function NavBar(props) {
                  
           </Container>
         </Navbar>
+
       ))}
     </>
   );

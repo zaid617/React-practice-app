@@ -1,10 +1,14 @@
+import React, { useState } from 'react';
 import NavBar from './components/Navbar';
 import TextArea from './components/TextArea';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/About';
-import React, { useState } from 'react';
 import AlertBox from './components/AlertBox';
-
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 function App() {
   const [mode,setMode] = useState('light');
@@ -38,10 +42,19 @@ function App() {
   }
   return (
    <>
+   <BrowserRouter>
    <NavBar title="Fun & Word" mode={mode} toggleMode={toggleMode} light={light}/>
    <AlertBox alert={alert}/>
-   <TextArea mode={mode}/>
-   <About mode={mode}/>
+
+        <Routes>
+
+          <Route path="/" element={<TextArea mode={mode}/>}/>
+
+          <Route path="/about" element={<About mode={mode}/>}/>
+        
+        </Routes>
+
+   </BrowserRouter>
    </>
   )
 }
