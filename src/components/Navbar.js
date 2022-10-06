@@ -31,8 +31,8 @@ function NavBar(props) {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   
-                  <Nav.Link><Link to="/">Home</Link></Nav.Link>
-                  <Nav.Link><Link to="/about">About</Link></Nav.Link>
+                  <NavLink><Link style={{textDecoration:"none"}} to="/">Home</Link></NavLink>
+                  <NavLink><Link style={{textDecoration:"none"}} to="/about">About</Link></NavLink>
                   
                 </Nav>
                 <Form className="d-flex">

@@ -74,9 +74,9 @@ export default function TextArea(props) {
 
     <div className="container" style={{color:props.mode==="dark"?"white":"black"}}>
         <h2><u>Words Summary</u></h2>
-        <p>No. Of Words : {text.split(" ").length}</p>
+        <p>No. Of Words : {text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
         <p>No. Of Characters : {text.length}</p>
-        <p>{0.008*text.split(" ").length} Minutes To Read.</p>
+        <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes To Read.</p>
     </div>
 
     <div className="container" style={{color:props.mode==="dark"?"white":"black"}}>
